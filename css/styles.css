@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* colors */
+:root {
+	--backgroundColor: #ffffff;
+	--primaryColor: #023373;
+	--secondaryColor: #1d83ff;
+	/* #0477BF */
+	--hoverColor: #44D2F2;
+}
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--backgroundColor);
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+/* Navigation Styles */
+
+#logo{
+	float: left;
+	margin-top: .8rem;
+	margin-left: 1.8rem;
+	margin-right: .5rem;
+	max-width: 60px;
+}
+nav {
+	background: var(--primaryColor);
+	color: #fff;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	-webkit-box-shadow: 0px 14px 9px -8px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 14px 9px -8px rgba(0,0,0,0.55);
+	box-shadow: 0px 14px 9px -8px rgba(0,0,0,0.55);
+}
+
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+
+.clearfix{
+	overflow-y: hidden;
+}
+
+nav ul li{
+	display: block;
+	margin: 50px;
+	line-height: 30px;
+}
+
+nav ul li a{
+	color: var(--background-color);
+	font-size: 20px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+a.active,a:hover{
+	background: none;
+	color: var(--hoverColor);
+	transition: .5s;
+}
+
+.checkbtn{
+	font-size: 30px;
+	color: #d7dff3;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+
+}
+
+#check{
+	display: none;
+}
+
+ul.navigation{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #d7dff3;
+	top: 80px;
+	left: -100%;
+	text-align: center;
+	transition: all .5s;
+	font-family: 'Exo 2';
+}
+
+#check:checked ~ ul{
+	left: 0;
+}
+
+.subpage-heading{
+	font-family: 'exo 2';
+	font-size: 16px;
+	color: #d7dff3;
+	margin-top: 32px;
+}
+
+/* Hero Styles*/
+
+.hero-wrapper{
+	height: 80vh;
+	background-size: cover;
+	background-image: url(../images/hands-touching-science.jpg);
+	background-position: center
+}
+
+.hero-banner{
+	position: absolute;
+	color: #d7dff3;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Exo 2';
+}
+
+.hero-banner h1{
+	font-size: 3em;
+	text-shadow: 3px 3px 4px #000;
+}
+
+.hero-banner h2{
+	font-style: italic;
+	font-size: 1.4em;
+	color: #d7dff3;
+	text-shadow: 3px 3px 4px #000;
+}
+
+/* Content */
+.row{
+	font-family: 'Exo 2';
+	color: var(--primaryColor);
+	background-color: #d7dff3;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 8rem;
+}
+
+p {
+	margin-top: 30px;
+}
+
+h1 {
+	margin-bottom: 3rem;
+}
+.first-section {
+	margin-top: 0px;
+}
+
+.row h2{
+	text-align: center;
+}
+
+/* clear floats */
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*  2/3 column */
+.column-66{
+	float: left;
+	width: calc(50% - 30px);
+	margin-right: 15px;
+	margin-top: 60px;
+}
+
+/* 1/3 column */
+.column-33{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	width: calc(50% - 30px);
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-left: 15px;
+}
+
+.homepage-text{
+	font-size: 17px;
+}
+
+.events-heading{
+	max-width: 600px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.young-boy{
+	position: relative;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+}
+
+.professor{
+    position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+}
+
+.night-museum{
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+}
+
+.solar-energy{
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+}
+
+.science-img{
+    position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+}
+
+section.visit {
+	margin-bottom: 3rem;
+	margin-top: 6rem;
+}
+
+.visit-img{
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+img {
+	-webkit-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	-moz-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	border-radius: 5px;
+}
+
+/* Article Styles */
+article{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#events-first {
+	margin-top: 30px;
+}
+/* Google Maps */
+
+.map-responsive{
+	overflow: hidden;
+	position: relative;
+	height: 600px;
+	-webkit-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	-moz-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+}
+
+.map-responsive iframe{
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	margin-bottom: 6rem;
+}
+
+/* Section styles */
+
+section{
+	margin-bottom: 5rem;
+	color: var(--primaryColor);
+	font-family: 'Exo 2';
+}
+
+h2{
+	text-align: center;
+	color: var(--primaryColor);
+	font-family: 'Exo 2';
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	justify-content: center;
+	max-width: 1200px;
+	margin-top: 30px;
+}
+.flex-column {
+	background-color: #181a18;
+	color: rgb(167, 167, 167);
+	padding: 15px 25px;
+	margin: 0 10px 0 10px;
+	-webkit-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	-moz-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	line-height: 1.5;
+	font-family: 'Open Sans', sans-serif;
+}
+.flex-column p {
+	font-size: 18px;
+	font-weight: bold;
+}
+.admission{
+	text-align: center;
+	border-radius: 5px;
+}
+.flex-column h2{
+	color: var(--secondaryColor);
+}
+
+.accessibility {
+	text-align: center;
+	border-radius:5px;
+}
+
+.food-drink{
+	text-align: center;
+	border-radius:5px;
+}
+
+.shop{
+	text-align: center;
+	border-radius: 5px;
+}
+
+.support{
+	text-align: center;
+	border-radius:5px;
+}
+
+.volunteer{
+	text-align: center;
+	border-radius: 5px;
+}
+
+.internships{
+	text-align: center;
+	border-radius: 5px;
+}
+
+/* Opening Hours */
+
+.demo-bg{
+	background: var(--primaryColor);
+	margin-top: 60px;
+	max-width: 1200px;
+	margin: auto;
+	margin-top: 60px;
+	border-radius: 5px;
+	-webkit-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	-moz-box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	box-shadow: 14px 14px 8px -8px rgba(0,0,0,0.55);
+	}
+	.business-row {
+		max-width: 30%;
+	}
+	.business-hours {
+	background: #181a18; 
+	padding: 40px 14px;
+	margin-top: -15px;
+	position: relative;
+	}
+	.business-hours:before{
+	content: '';
+	width: 23px;
+	height: 23px;
+	background: #111;
+	position: absolute;
+	top: 5px;
+	left: -12px;
+	transform: rotate(-45deg);
+	z-index: -1;
+	}
+	.business-hours .title {
+	font-size: 20px;
+	color: #BBB;
+	text-transform: uppercase;
+	padding-left: 5px;
+	border-left: 4px solid var(--hoverColor); 
+	}
+	.business-hours li {
+	color: #888;
+	line-height: 30px;
+	border-bottom: 1px solid #333; 
+	}
+	.business-hours li:last-child {
+	border-bottom: none; 
+	}
+	.business-hours .opening-hours li.today {
+	color: var(--hoverColor); 
+	}
+
+ /* Subpage Hero  */
+
+.subhero-wrapper{
+	height: 35vh;
+	background-size: cover;
+	background-image: url(../images/hands-touching-science.jpg);
+	background-position: center
+}
+
+.subhero-banner{
+	position: absolute;
+	color: var(--backgroundColor);
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Exo 2';
+}
+
+.subhero-banner h2{
+	font-style: italic;
+	font-size: 1.3em;
+	color: var(--backgroundColor);
+	text-shadow: 3px 3px 4px #000;
+}
+
+/* Headings */
+
+.sites-heading{
+	font-family: 'Exo 2';
+	text-align: center;
+	color: var(--primaryColor);
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* Footer */
+
+footer{
+	background-color: #023373;
+	color: #fff;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	text-align: center;
+	margin-top: 6rem;
+}
+
+.fa{
+	padding: 17px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.fa:hover{
+	opacity: 0.7;
+	background: var(--backgroundColor);
+	color: var(--primaryColor);
+}
+
+.fa-facebook{
+	background: #3b5998;
+	color: #fff
+}
+
+.fa-twitter{
+	background: #55acee;
+	color: #fff;
+}
+
+.fa-youtube{
+	background: #c4302b;
+	color: #fff;
+}
+
+.fa-instagram{
+	background: #3f729b;
+	color: #fff;
+}
+
+.footer-text{
+	font-family: 'Exo 2';
+	margin-top: 2rem;
+}
+
+#designed{
+	font-style: italic;
+	margin-top: 10px;
+	font-size: 0.9em;
+}
+
+.footer-p {
+	margin: 0 auto;
+}
+
+/* Styles for screens wider than 600px */
+
+@media only screen and (min-width: 600px) {
+	p {
+		max-width: 600px;
+		display: block;
+	}
+	h3 {
+		display: block;
+		margin: 0 auto;
+		justify-content: center;
+		text-align: center;
+	}
+	.map-responsive{
+		max-width: 1200px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 6rem;
+	}
+
+
+@media only screen and (min-width: 1000px){
+
+    .checkbtn{
+	display: none;
+	}
+	#check {
+		display: none;
+	}
+	nav ul li {
+		display: inline-block;
+		margin: 0 5px;
+		line-height: 90px;
+	}
+	nav ul li a{
+		color: #d7dff3;
+		margin-left: 5vh;
+	}
+	ul.navigation{
+		color: #d7dff3;
+		left: 0;
+		height: 10vh;
+		top: -5px;
+		background: none;
+
+	}
+	.events-heading{
+		max-width: none;
+		padding: 0;
+		margin-top: 0;
+	}
+	.first-section, .second-section, .third-section{
+		padding: 0px;
+	}
+	.homepage-text h2{
+		margin-top: 0;
+	}
+	.visit-img {
+		width: 1200px;
+	}
+}
+}
+
+@media screen and (max-width: 1000px) {
+	.row{
+		padding: 0;
+	}
+	.column-33{
+		margin: 0 auto;
+	}
+	.column-66{
+		margin: 0 auto;
+		padding: 0px;
+	}
+	.column-66,
+	.column-33{
+		width: 100%;
+	}
+	.young-boy,
+	.professor,
+	.night-museum,
+	.solar-energy,
+	.visit-img,
+	.science-img{
+		margin: 0 auto;
+		display: block;
+	}
+	.hero-banner h1{
+		font-size: 2em;
+	}
+	.hero-banner h2{
+		font-size: 1.2em;
+	}
+}
