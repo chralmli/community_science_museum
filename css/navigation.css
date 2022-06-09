@@ -1,0 +1,104 @@
+/* colors */
+:root {
+	--backgroundColor: #e4e4e4;
+	--primaryColor: #023373;
+	--secondaryColor: #1d83ff;
+	/* #0477BF */
+	--hoverColor: #44D2F2;
+}
+
+header {
+    z-index: 999;
+}
+.navbar {
+    background-color: var(--primaryColor);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    -webkit-box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
+    -moz-box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
+    box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    display: block;
+    color: var(--backgroundColor);
+    font-size: 18px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.active,
+.nav-link:hover {
+    color: var(--hoverColor);
+}
+
+/* mobile menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in;
+    background-color: var(--backgroundColor);
+}
+
+@media screen and (max-width: 768px) {
+    /* mobile menu responsiveness */
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        -webkit-box-shadow: 0px 15px 13px -15px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 15px 13px -15px rgba(0,0,0,1);
+        box-shadow: 0px 15px 13px -15px rgba(0,0,0,1);
+        background-color: var(--secondaryColor);
+        z-index: 999;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+}
