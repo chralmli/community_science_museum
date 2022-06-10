@@ -11,6 +11,8 @@ header {
     z-index: 999;
 }
 .navbar {
+    position: fixed;
+    width: 100%;
     background-color: var(--primaryColor);
     height: 70px;
     display: flex;
@@ -20,6 +22,7 @@ header {
     -webkit-box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
     -moz-box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
     box-shadow: 14px 15px 13px -15px rgba(0,0,0,1);
+    z-index: 999;
 }
 
 .nav-menu {
